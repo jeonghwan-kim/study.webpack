@@ -23,10 +23,11 @@ module.exports = {
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       use: {
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name: '[name].[ext]?[hash]',
-          publicPath: './dist/'
+          publicPath: './dist/',
+          limit: 10000
         }
       }
     }]
